@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <h1> hello from index</h1>
+    @DateTime.Now
+    <!-- html comment-->
+    <!--  name -->
+    <!-- #endregion -->
+    @{
+        int c = 80;
+        int y = 67;
+        //integr numbers
+        /*
+        * computer
+        * web
+        */
+    }
+    @*header*@
+
+    <nav class="mt-5">
+        <center>
+            @*html tags*@
+            <a class="btn btn-success" href="/Home/Index">home</a>
+            @*htmml helper*@
+            @*@Html.ActionLink("home","Index","Home");*@
+
+            <a class="btn btn-info" asp-Conroller="Home" asp-action="aboutus"> about us</a>
+            <a class="btn btn-primary" href="/Home/contactus">contact us</a>
+
+            <a class="btn btn-success" href="/accountController1/login"> login</a>
+            <a class="btn btn-primary" href="accountController1/register">register</a>
+        </center>
+    </nav>
+    @*header*@
+    @*body*@
+    <div>
+        @RenderBody()
+    </div>
+    @*body*@
+    @*footer*@
+    <footer>
+        <center>
+            <div>
+                <p>CopyRights &copy; @DateTime.Now.Year </p>
+            </div>
+        </center>
+    </footer>
+    @*footer*@
+</body>
+</html>
